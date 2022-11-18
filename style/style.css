@@ -2,6 +2,8 @@
     font-family: 'Roboto', sans-serif;
 }
 .grid-container {
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
     'sidebar header header header'
@@ -10,9 +12,11 @@
     'sidebar main main main';
 }
 .sidebar {
+    grid-area: sidebar;
     background-color: #0ea5e9;
     height: 100vh;
     color: #fff;
+    width: calc(230px + 0.7vw);
 }
 .sidebar > div {
     display: flex;
@@ -24,4 +28,73 @@
 }
 svg {
     margin: 15px 20px;
+}
+/* Header styling */
+img {
+    width: 50px;
+    height: 50px;
+}
+.header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    grid-area: header;
+    border-bottom: 2px solid #4f4f4f;
+}
+.topNav {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+.search > input {
+    width: min(75%);
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ededed;
+}
+  .menuIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+.profile > img {
+    padding: 0 30px;
+}
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+}
+.profile-name {
+    margin-left: 10px;
+}
+.buttons {
+    margin-right: 10px;
+    display: flex;    
+    gap: 2rem;
+}
+.btn {
+    width: 70px;
+    height: 35px;
+    background-color: #0ea5e9;
+    color: white;
+    border: 1px solid #0ea5e9;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
+  /* main section */
+.main {
+    grid-area: main;
 }
