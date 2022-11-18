@@ -1,0 +1,27 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'sidebar header header header'
+    'sidebar main main main'
+    'sidebar main main main'
+    'sidebar main main main';
+}
+.sidebar {
+    background-color: #0ea5e9;
+    height: 100vh;
+    color: #fff;
+}
+.sidebar > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo-img {
+    margin: 15px 15px;    
+}
+svg {
+    margin: 15px 20px;
+}
