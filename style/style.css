@@ -7,16 +7,16 @@
     display: grid;
     grid-template-areas: 
     'sidebar header header header'
-    'sidebar main main main'
-    'sidebar main main main'
-    'sidebar main main main';
+    'sidebar main main project'
+    'sidebar main main project'
+    'sidebar main main project';
 }
 .sidebar {
     grid-area: sidebar;
     background-color: #0ea5e9;
-    height: 100vh;
+    height: 100%;
     color: #fff;
-    width: calc(230px + 0.7vw);
+    /* width: calc(230px + 0.7vw); */
 }
 .sidebar > div {
     display: flex;
@@ -95,6 +95,29 @@ img {
   }
 
   /* main section */
-.main {
-    grid-area: main;
+.grid {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    background-color: #e8e8ef;
+}
+.cards > .card {
+    box-shadow: 2px 2px 6px 0px;
+    border: 1px solid #4f4f4f;
+    border-style: none;
+    margin: 5px;
+    border-left: 5px solid #f3c50d;
+    border-radius: 5px;
+}
+
+.cards {
+    display: grid;
+    grid-area: span;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
 }
