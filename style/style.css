@@ -15,7 +15,6 @@
     background-color: var(--primary-color);
     height: 100%;
     color: #fff;
-    /* width: calc(230px + 0.7vw); */
 }
 .sidebar > div {
     display: flex;
@@ -38,12 +37,10 @@
     border-bottom: 2px solid #4f4f4f;
 }
 main {
-    gap: 20px;
     display: grid;
     grid-area: main;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    background-color: #E2E8F0
+    background-color: #E2E8F0;
+    padding-right: 3.5em;
 }
 .projects {
     display: grid;
@@ -55,6 +52,22 @@ main {
     height: min-content;
     grid-area: 2/8/auto/10;
 }
+ h5 {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.card-text {
+    font-size: 0.9em;
+}
+
+hr {
+    width: 90%;
+    align-self: center;
+    height: 1px solid;
+    margin: 10px 0;
+}
+
 .trending {
     grid-area: auto/8/auto/10;
 }
@@ -85,6 +98,7 @@ img {
     border-radius: 10px;
     border: none;
     background-color: #ededed;
+    width: 100%;
 }
 .menuIcon {
     display: flex;
@@ -111,6 +125,8 @@ img {
 h3{
     grid-area: 1/1/1/8;
     padding-left: 15px;
+    font-size: 1.2em;
+    margin-top: 15px;
 }
 .buttons {
     margin-right: 10px;
@@ -126,19 +142,44 @@ h3{
     border-radius: 5px;
     font-size: 18px;
   }
+
+
+  .avatar1 {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #47831eab;
+    border-radius: 50%;
+    background-color: cadetblue;
+    margin-right: 10px;
+   }
+   li.trend {
+    display: flex;
+    margin-bottom: 3px;
+    margin-left: 5px;
+
+   }
+   #announcements > ul > hr {
+    border: 1px solid;
+   }
+   
+
 #cards{
+    gap: 20px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     grid-area: 2/span 4/auto/7;
 }
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-shadow: 1px 1px 20px 0px #c2c2c2;
     border: 1px solid #4f4f4f;
     border-style: none;
     padding: 20px;
-    border-left: 5px solid #f3c50d;
-    border-radius: 5px;
+    border-left: 10px solid #f3c50d;
+    border-radius: 10px;
     margin: 15px;
     background-color: #fff;
 }
